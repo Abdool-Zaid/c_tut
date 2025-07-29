@@ -1,12 +1,9 @@
 #include  <stdio.h>
 
 int main(){
-   int a;
-   float b;
-   a=4;
-   b=23.56f;
-
-   printf("%d + %f = %f\n", a, b, a+b);
-
+ float exvat =0.0f;
+    printf("enter exVAT amount ...\n");
+    scanf("%f", &exvat);
+    printf("incVAT= %f",(exvat+(15*(exvat/100))));
     return 0;
 }
