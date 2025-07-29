@@ -2,8 +2,9 @@
 
 int main(){
  float exvat =0.0f;
+ const float VAT = 15;
     printf("enter exVAT amount ...\n");
     scanf("%f", &exvat);
-    printf("incVAT= %f",(exvat+(15*(exvat/100))));
+    printf("incVAT= %f",(exvat+(VAT*(exvat/100))));
     return 0;
 }
