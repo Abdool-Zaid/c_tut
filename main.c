@@ -41,6 +41,7 @@ void sequence_roller(int count , int maxnum){
         printf("%d \n", res);
         sum_total = sum_total + res;
     }
-
-    printf("total : %d \n", sum_total);
+    if (count >1){
+        printf("total : %d \n", sum_total);
+    }
 }
