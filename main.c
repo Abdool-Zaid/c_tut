@@ -1,14 +1,19 @@
 #include  <stdio.h>
+#include  <stdlib.h>
+#include  <time.h>
+
+int roll_dice(int max_num){
+    int result;
+    srand(time(NULL)); 
+     result = rand() % max_num;
+    return result;
+}
 
 int main(){
-    float num1;
-    float num2;
- printf("enter the first number");
- scanf("%f" , &num1);
- printf("enter the second number");
- scanf("%f" , &num2);
- printf("sum of %f and %f is %f ", num1, num2, num1 + num2);
- 
+    int max_num;
+    printf("max number : ... \n");
+    scanf("%d", &max_num);
+    printf("result : %d", roll_dice(max_num));
  return 0;
 }
 
