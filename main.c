@@ -18,7 +18,8 @@ int main(){
         int max_num;
         printf("max number : ... \n");
         scanf("%d", &max_num);
-        printf("result : %d", roll_dice(max_num));
+        system("cls");
+        printf("result : %d\n", roll_dice(max_num));
     }
     
  return 0;
