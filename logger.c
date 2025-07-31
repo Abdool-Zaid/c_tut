@@ -6,7 +6,9 @@ int main(){
     char line[255];
     char fname[] = "log.txt";
    printf("add log :  ");
-   scanf("%s", line);
+ if (scanf("%254s", line) != 1) {
+    printf("\nlog exceeds max size of 255 characters\n");
+}
    add_log(line ,fname );
 //    read_log(fname);
 
