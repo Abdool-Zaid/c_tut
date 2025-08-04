@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
-void onButtonClick(HWND hwnd){
+void onButtonClick(HWND hwnd  ){// TODO: update the user_msg
+    
     printf("clicked the button\n");
 }
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
@@ -20,7 +21,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
 }
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-  
+    char user_msg[]= "Hello, Windows!";
     const char CLASS_NAME[] = " Window Class";
     WNDCLASS wc = {0};
     wc.lpfnWndProc = WindowProc;
@@ -44,7 +45,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     }
 
     CreateWindow(   //add text
-        "STATIC", "Hello, Windows!",
+        "STATIC", user_msg,
         WS_VISIBLE | WS_CHILD,
         50, 50, 200, 20, 
         hwnd, NULL, hInstance, NULL
