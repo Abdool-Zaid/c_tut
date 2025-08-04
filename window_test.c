@@ -1,14 +1,22 @@
 #include <stdio.h>
 #include <windows.h>
-
+void onButtonClick(HWND hwnd){
+    printf("clicked the button\n");
+}
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
     switch (uMsg) {
+         case WM_COMMAND:
+            if (LOWORD(wParam) == 1) { // Button ID
+                onButtonClick(hwnd); // Call the custom function
+            }
+            break;
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
         default:
             return DefWindowProc(hwnd, uMsg, wParam, lParam);
     }
+    return 0;
 }
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
@@ -35,6 +43,21 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         return 1;
     }
 
+    CreateWindow(   //add text
+        "STATIC", "Hello, Windows!",
+        WS_VISIBLE | WS_CHILD,
+        50, 50, 200, 20, 
+        hwnd, NULL, hInstance, NULL
+    );
+
+   
+    CreateWindow( // add btn
+        "BUTTON", "Click Me",
+        WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+        250, 200, 100, 30,
+        hwnd, (HMENU)1, hInstance, NULL 
+    );
+    
     
     ShowWindow(hwnd, nCmdShow); // do not remove this line 
 
