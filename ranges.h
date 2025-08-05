@@ -1,0 +1,1 @@
+int max_size(void* data, char data_type);

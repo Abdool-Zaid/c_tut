@@ -2,6 +2,7 @@
   "files.associations": {
     "lua.h": "c",
     "lualib.h": "c",
-    "lauxlib.h": "c"
+    "lauxlib.h": "c",
+    "ranges.h": "c"
   }
 }
