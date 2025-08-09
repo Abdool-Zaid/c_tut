@@ -3,6 +3,7 @@
     "lua.h": "c",
     "lualib.h": "c",
     "lauxlib.h": "c",
-    "ranges.h": "c"
+    "ranges.h": "c",
+    "ctype.h": "c"
   }
 }

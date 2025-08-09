@@ -1,11 +1,12 @@
 #include <stdio.h>
-int main()
-{
-int a = 15, b = 0;
-printf("Addition: %d\n", a + b);
-printf("Subtraction: %d\n", a -b);
-printf("Multiplication: %d\n", a* b);
-printf("Division: %d\n", a / b);
-printf("Modulus: %d\n", a % b);
-return 0;
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    if (scanf("%d", &num) == 1) {  // Returns 1 if successfully read an integer
+        printf("Valid integer: %d\n", num);
+    } else {
+        printf("Not a valid integer.\n");
+    }
+    return 0;
 }
