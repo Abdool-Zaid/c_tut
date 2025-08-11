@@ -4,6 +4,7 @@
     "lualib.h": "c",
     "lauxlib.h": "c",
     "ranges.h": "c",
-    "ctype.h": "c"
+    "ctype.h": "c",
+    "stdio.h": "c"
   }
 }

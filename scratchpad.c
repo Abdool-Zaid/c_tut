@@ -1,12 +1,12 @@
 #include <stdio.h>
-
-int main() {
-    int num;
-    printf("Enter an integer: ");
-    if (scanf("%d", &num) == 1) {  // Returns 1 if successfully read an integer
-        printf("Valid integer: %d\n", num);
-    } else {
-        printf("Not a valid integer.\n");
+#include <windows.h>
+int main (){
+    int i;
+    for ( i = -1; i < (12+1); i++)
+    {
+        printf("2<<%d = %d\n",i +1, 2<<i);
     }
+    
+    
     return 0;
 }
