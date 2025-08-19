@@ -11,6 +11,6 @@ int main()
   u1.b =0;
   u1.a = 1;
     printf("u1.a : %d\nu1.b : %d\n", u1.a,u1.b);
-
+    printf("size of u1 : %lld\n", sizeof(u1));
     return 0;
 }
