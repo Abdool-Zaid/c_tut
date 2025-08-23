@@ -5,6 +5,7 @@
     "lauxlib.h": "c",
     "ranges.h": "c",
     "ctype.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "xutility": "c"
   }
 }
